@@ -1,0 +1,84 @@
+{
+  "pre_year": 2015,
+  "post_year": 2025,
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "radius_m": 500.0,
+  "radius_definition": "center_to_vertex",
+  "metric_crs": "EPSG:32637",
+  "min_bike_m": 10.0,
+  "road_buffer_m": 30.0,
+  "bike_snapshot_date": null,
+  "road_snapshot": "current_or_user_supplied",
+  "created_utc": "2026-10-12T09:41:08.233095+00:00",
+  "qa": {
+    "raw_accidents": 94786,
+    "duplicate_ids_removed": 0,
+    "invalid_point_geometry": 37,
+    "bicycle_crashes_raw": 4618,
+    "invalid_dates": 0,
+    "months_without_records": {
+      "2015": [],
+      "2016": [
+        1
+      ],
+      "2017": [
+        1
+      ],
+      "2018": [],
+      "2019": [],
+      "2020": [],
+      "2021": [],
+      "2022": [],
+      "2023": [],
+      "2024": [],
+      "2025": [],
+      "2026": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "bicycle_crashes_valid_points": 4617,
+    "grid_cells_total": 4401,
+    "grid_cells_with_roads": 3674,
+    "accidents_outside_city": 2972,
+    "boundary_multiple_matches": 0,
+    "inside_city_unassigned": 0,
+    "accidents_in_cells_without_roads": 102,
+    "accidents_assigned": 91675,
+    "accidents_selected_months": 91675
+  },
+  "input_sha256": {
+    "moskva.geojson": "202a02fc58af672de68922176554b5d42a1a301eb867b3b520c216f18ef95781",
+    "bike_lanes_singlepart.geojson": "953c7e280d46e63a7cac7b31c73cb24dfbf8d4c5dd253793b42054d56a5ce902",
+    "moscow_boundary.geojson": "d6183f4cc60ec1ec860851471714f9ecae0cee46192891cd589b49d6514a7fcf",
+    "roads_moscow_admin.geojson": "fdecf4dc596bfd96fda26736d68355d9678ba4254acd4d9c9d1f1d7942e78e09"
+  },
+  "versions": {
+    "pandas": "2.3.3",
+    "geopandas": "1.0.1",
+    "shapely": "2.0.7",
+    "osmnx": "2.0.7"
+  }
+}

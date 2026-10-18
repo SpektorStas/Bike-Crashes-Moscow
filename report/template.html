@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="light" name="color-scheme"/>
+  <meta content="Велодорожки и ДТП с велосипедистами в Москве: пространственные данные, сравнение 2015 и 2025 годов, несколько моделей и проверка соседских эффектов." name="description"/>
+  <title>
+   Велодорожки и ДТП в Москве · 2015–2025
+  </title>
+  <style>
+   __REPORT_STYLE__
+  </style>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   К исследованию
+  </a>
+  <header class="masthead">
+   <div class="wrap header-row">
+    <a class="brand" href="#main">
+     Велодорожки и ДТП
+    </a>
+    <span class="header-period">
+     Москва · 2015—2025
+    </span>
+   </div>
+   <nav aria-label="Разделы отчёта" class="reading-nav" id="reading-nav">
+    <div class="wrap">
+     <div class="reading-links" id="reading-links">
+      <a aria-current="location" href="#cover">
+       Начало
+      </a>
+      <a href="#geography">
+       Карта
+      </a>
+      <a href="#dynamics">
+       Динамика
+      </a>
+      <a href="#models">
+       Модели
+      </a>
+      <a href="#neighbors">
+       Соседние улицы
+      </a>
+      <a href="#findings">
+       Результаты
+      </a>
+      <a href="#method">
+       Данные
+      </a>
+     </div>
+     <div class="reading-percent" id="reading-percent">
+      0%
+     </div>
+    </div>
+   </nav>
+   <div aria-label="Прогресс чтения отчёта" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="reading-track" id="reading-progress" role="progressbar">
+    <span class="reading-fill" id="reading-fill">
+    </span>
+    <svg aria-hidden="true" class="reading-bike" id="reading-bike" viewBox="0 0 50 36">
+     <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <g class="reading-wheel"><circle cx="10" cy="27" r="7"/><path d="M10 20v14M3 27h14"/></g>
+      <g class="reading-wheel"><circle cx="40" cy="27" r="7"/><path d="M40 20v14M33 27h14"/></g>
+      <path d="m10 27 10-14 7 14H10l17-10 13 10-6-17h5M17 13h7"/>
+      <g class="reading-rider">
+       <circle cx="29" cy="4.5" r="3" fill="var(--paper)"/>
+       <path d="m25 8-6 9 9 4-2 9M25 8l6 6h7" stroke-width="2.3"/>
+      </g>
+     </g>
+    </svg>
+    <svg aria-hidden="true" class="reading-car" viewBox="0 0 58 36">
+     <g fill="var(--paper)" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+      <path d="M3 27v-8l8-3 7-11h23l8 12 6 2v8H3Z"/>
+      <path d="m16 16 5-8h17l5 8H16ZM30 8v8M4 21h5M48 21h6" fill="none"/>
+      <circle cx="13" cy="28" r="5"/><circle cx="45" cy="28" r="5"/>
+     </g>
+    </svg>
+    <svg aria-hidden="true" class="reading-impact" viewBox="0 0 20 24">
+     <path d="m10 2-1 6M2 6l4 4m12-3-5 4M3 17l4-2m10 6-4-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"/>
+    </svg>
+   </div>
+  </header>
+  <main class="report-main" id="main">
+   <div aria-hidden="true" class="section-anchor" data-section="cover">
+   </div>
+   <section class="hero" id="cover">
+    <div class="wrap">
+     <div class="hero-layout">
+      <div class="cover-copy">
+       <div class="eyebrow">
+        Москва · 2015—2025
+       </div>
+       <h1>
+        Велодорожки
+        <br/>
+        и ДТП
+        <br/>
+        в Москве
+       </h1>
+       <a class="hero-link" href="#geography">
+        Карта ДТП
+        <span aria-hidden="true">
+         ↓
+        </span>
+       </a>
+      </div>
+      <svg aria-labelledby="cover-art-title cover-art-desc" class="cover-art" role="img" viewBox="0 0 460 360">
+       <title id="cover-art-title">
+        Велосипедист и столкновение на городской улице
+       </title>
+       <desc id="cover-art-desc">
+        Велосипедист и автомобиль; у переднего колеса обозначено столкновение. Условная сцена.
+       </desc>
+       <path d="M24 278h412" stroke="#c2c2c2" stroke-width="1.3">
+       </path>
+       <path d="M27 291h192" stroke="#2d647f" stroke-linecap="round" stroke-width="3">
+       </path>
+       <path d="M244 291h192" stroke="#b2b2b2" stroke-dasharray="14 12" stroke-width="1.4">
+       </path>
+       <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <g stroke="#2e2e2e" stroke-width="2.5">
+         <circle cx="111" cy="240" r="34">
+         </circle>
+         <circle cx="239" cy="240" r="34">
+         </circle>
+         <path d="m111 240 40-62 32 62h-72l53-41h60l15 41M183 240l35-75h17M138 178h28">
+         </path>
+        </g>
+        <g stroke="#2d647f" stroke-width="8">
+         <path d="m161 161 31-47 33 34 26 8">
+         </path>
+         <path d="m161 161 39 28-17 44">
+         </path>
+        </g>
+        <path d="m190 115 11-20" stroke="#2e2e2e" stroke-width="3">
+        </path>
+        <circle cx="209" cy="79" fill="#f6f6f6" r="15" stroke="#2e2e2e" stroke-width="2.5">
+        </circle>
+        <path d="m193 77 30-4c-4-17-27-17-30 4Z" fill="#2d647f" stroke="#2d647f" stroke-width="2">
+        </path>
+        <path d="m180 233 11 4M249 156h10" stroke="#2e2e2e" stroke-width="3">
+        </path>
+        <g stroke="#ac5b43" stroke-width="2.4">
+         <path d="M307 247v-39q0-8 8-8h16l15-28q3-6 10-6h43q8 0 11 7l12 27h10q7 0 7 7v40h-18m-33 0h-47" fill="#e8cbbd" fill-opacity=".4">
+         </path>
+         <path d="m339 198 13-24h43l10 24zM375 176v21M311 213h15M424 213h11">
+         </path>
+         <circle cx="324" cy="245" fill="#f0f0f0" r="16">
+         </circle>
+         <circle cx="405" cy="245" fill="#f0f0f0" r="16">
+         </circle>
+        </g>
+        <g stroke="#ac5b43" stroke-width="2.8">
+         <path d="m286 210-9-14m14 8 2-19m2 31 17-11m-31 15-18-3">
+         </path>
+        </g>
+       </g>
+       <text class="cover-caption" x="27" y="326">
+        ДТП С УЧАСТИЕМ ВЕЛОСИПЕДИСТОВ
+       </text>
+      </svg>
+     </div>
+     <div class="hero-bottom">
+      <p class="lede" id="hero-summary">
+       Сравниваем ДТП с велосипедистами в 2015 и 2025 годах на территориях с нынешними велодорожками и без них. Отдельно оцениваем изменения на соседних улицах.
+      </p>
+      <div class="study-tag">
+       <strong id="study-period">
+       </strong>
+       ДТП с участием велосипедистов
+       <br/>
+       Радиус ячейки — 500 метров
+      </div>
+     </div>
+     <div aria-label="Основные параметры исследования" class="metrics" id="metrics">
+     </div>
+    </div>
+   </section>
+   <div aria-hidden="true" class="section-anchor" data-section="geography">
+   </div>
+   <section class="section" id="geography">
+    <div class="wrap">
+     <div class="section-heading">
+      <div>
+       <div class="section-number">
+        01 / ГЕОГРАФИЯ
+       </div>
+       <h2>
+        Карта ДТП
+       </h2>
+      </div>
+      <p class="section-intro">
+       На карте — ДТП с велосипедистами за выбранный год. Начальный масштаб охватывает Москву внутри МКАД; серой линией показана сама кольцевая дорога. Карту можно перемещать и уменьшать.
+      </p>
+     </div>
+     <div class="card">
+      <div class="map-shell">
+       <div class="map-area">
+        <canvas aria-label="Карта ДТП в Москве. Начальный вид — территория внутри МКАД. Стрелки перемещают карту, плюс и минус меняют масштаб, Home возвращает к МКАД. Enter выбирает ячейку в центре карты." id="map" role="img" tabindex="0">
+        </canvas>
+        <div class="map-title">
+         <strong id="map-year">
+         </strong>
+         <span id="map-total">
+         </span>
+        </div>
+        <div class="partial" id="partial-warning">
+         Неполный год: число ДТП несопоставимо с полными годами.
+        </div>
+        <div aria-label="Масштаб карты" class="zoom-controls">
+         <button aria-label="Приблизить карту" id="zoom-in">
+          +
+         </button>
+         <button aria-label="Отдалить карту" id="zoom-out">
+          −
+         </button>
+         <button aria-label="Москва в пределах МКАД" title="Вернуться к МКАД" id="zoom-reset">
+          ⌂
+         </button>
+        </div>
+        <div aria-hidden="true" class="map-north">
+         С
+        </div>
+        <div class="scale-bar">
+         <i id="scale-line">
+         </i>
+         <span id="scale-label">
+         </span>
+        </div>
+        <div class="map-attribution">
+         МКАД и граница: © OpenStreetMap contributors
+        </div>
+       </div>
+       <aside class="map-sidebar">
+        <div>
+         <div class="small-label">
+          Слой карты
+         </div>
+         <div aria-label="Слой карты" class="segmented" id="map-modes">
+          <button aria-pressed="true" data-mode="crashes">
+           ДТП
+          </button>
+          <button aria-pressed="false" data-mode="exposure">
+           Соседство
+          </button>
+         </div>
+        </div>
+        <div class="legend-container">
+         <div class="small-label" id="legend-title">
+          ДТП / ячейку / год
+         </div>
+         <div class="legend" id="map-legend">
+         </div>
+         <p class="map-note" id="legend-note" style="margin-top:10px">
+          Одинаковая шкала для всех лет. Нулевая ячейка означает отсутствие зарегистрированных ДТП.
+         </p>
+        </div>
+        <div>
+         <label class="check">
+          <input checked="" id="show-bike" type="checkbox"/>
+          <span>
+           Показать велодорожки
+          </span>
+         </label>
+         <p class="map-note" style="margin-top:9px">
+          Текущий слой велодорожек одинаков во все годы. Он не отражает историю строительства.
+         </p>
+        </div>
+        <div aria-live="polite" class="cell-info" id="cell-info">
+         <strong>
+          Выберите место на карте
+         </strong>
+         <span>
+          Нажмите на гексагон, чтобы увидеть его группу и число ДТП.
+         </span>
+        </div>
+       </aside>
+      </div>
+      <div class="timeline">
+       <button aria-label="Запустить анимацию по годам" aria-pressed="false" class="play" id="play">
+        ▶
+       </button>
+       <div class="range-wrap">
+        <label class="sr-only" for="year-slider">
+         Год на карте
+        </label>
+        <input id="year-slider" min="0" step="1" type="range" value="0"/>
+        <div class="range-labels" id="year-labels">
+        </div>
+       </div>
+       <p class="timeline-caption" id="animation-note">
+        Анимация показывает полные годы. Пробелы в данных отмечены на графике ниже.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div aria-hidden="true" class="section-anchor" data-section="dynamics">
+   </div>
+   <section class="section" id="dynamics">
+    <div class="wrap">
+     <div class="section-heading">
+      <div>
+       <div class="section-number">
+        02 / ДИНАМИКА
+       </div>
+       <h2>
+        Динамика ДТП
+       </h2>
+      </div>
+      <p class="section-intro">
+       В обеих группах число ДТП выросло. На графике — среднее на одну ячейку; справа — рост относительно 2015 года.
+      </p>
+     </div>
+     <div class="chart-grid">
+      <div class="card chart-card">
+       <div class="chart-title">
+        ДТП с велосипедистами на один гексагон
+       </div>
+       <div class="chart-subtitle">
+        Ячейки разделены по наличию велодорожек в текущем слое
+       </div>
+       <div class="chart-legend">
+        <span>
+         <i class="line-key">
+         </i>
+         С велодорожками
+        </span>
+        <span>
+         <i class="line-key control">
+         </i>
+         Без велодорожек
+        </span>
+       </div>
+       <div id="trend-chart">
+       </div>
+       <p class="chart-foot">
+        В 2016 и 2017 годах нет данных за январь, поэтому линии прерываются. По этому графику нельзя проверить тренды до строительства: даты открытия дорожек неизвестны.
+       </p>
+      </div>
+      <aside class="explain-panel">
+       <div>
+        <div class="small-label">
+         2015 → 2025
+        </div>
+        <h3>
+         Изменение к 2015 году
+        </h3>
+        <p id="comparison-text">
+        </p>
+       </div>
+       <div class="comparison" id="growth-comparison">
+       </div>
+      </aside>
+     </div>
+     <p class="analysis-note">
+      Число ДТП зависит в том числе от числа поездок. Данных о велопотоке нет, поэтому риск одной поездки не оценивался.
+     </p>
+    </div>
+   </section>
+   <div aria-hidden="true" class="section-anchor" data-section="models">
+   </div>
+   <section class="section" id="models">
+    <div class="wrap">
+     <div class="section-heading">
+      <div>
+       <div class="section-number">
+        03 / ОЦЕНКИ
+       </div>
+       <h2>
+        Оценки моделей
+       </h2>
+      </div>
+      <p class="section-intro">
+       Точка показывает, насколько изменение ДТП в группе с велодорожками отличается от контроля. Отрезок — 95%-й доверительный интервал. Оценки числа ДТП и относительных изменений показаны отдельно.
+      </p>
+     </div>
+     <div class="card">
+      <div class="model-toolbar">
+       <div>
+        <div class="small-label">
+         Шкала результата
+        </div>
+        <div aria-label="Шкала моделей" class="segmented" id="main-scales">
+        </div>
+       </div>
+       <label class="check filter-checkbox">
+        <input id="show-sensitivity" type="checkbox"/>
+        <span>
+         Проверки устойчивости
+        </span>
+       </label>
+      </div>
+      <div class="model-chart">
+       <div class="model-scale-note" id="main-scale-note">
+       </div>
+       <div id="main-model-chart">
+       </div>
+      </div>
+      <p class="model-notes">
+       Слева от нуля — меньше ДТП относительно контроля, справа — больше. Если интервал пересекает ноль, данные допускают оба варианта. Даты строительства неизвестны, поэтому у оценок нет прямой причинной интерпретации.
+      </p>
+      <details class="model-details">
+       <summary>
+        Таблица моделей: оценки, формулы и выборки
+       </summary>
+       <div class="table-top">
+        <p>
+         Основные модели и дополнительные проверки. Для соседних зон указан также p с поправкой Холма на множественные сравнения. Таблицу можно скачать в CSV.
+        </p>
+        <button class="btn" id="download-csv">
+         ↓ Скачать CSV
+        </button>
+       </div>
+       <div class="table-scroll">
+        <table id="model-table">
+         <thead>
+          <tr>
+           <th scope="col">
+            Модель
+           </th>
+           <th scope="col">
+            Шкала
+           </th>
+           <th scope="col">
+            Оценка [95% ДИ]
+           </th>
+           <th scope="col">
+            p / p Holm
+           </th>
+           <th scope="col">
+            Наблюдения / ячейки
+           </th>
+           <th scope="col">
+            Спецификация
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+         </tbody>
+        </table>
+       </div>
+      </details>
+     </div>
+    </div>
+   </section>
+   <div aria-hidden="true" class="section-anchor" data-section="neighbors">
+   </div>
+   <section class="section" id="neighbors">
+    <div class="wrap">
+     <div class="section-heading">
+      <div>
+       <div class="section-number">
+        04 / СОСЕДСКИЕ ЭФФЕКТЫ
+       </div>
+       <h2>
+        ДТП на соседних территориях
+       </h2>
+      </div>
+      <p class="section-intro">
+       Проверка гипотезы о смене маршрутов: сравниваем ДТП в соседних зонах, а затем суммируем изменения в ячейках с велодорожками и их окружении.
+      </p>
+     </div>
+     <div class="spillover-layout">
+      <div class="spillover-intro">
+       <svg aria-label="Схема соседства: велодорожка и три зоны расстояния до 500, 1000 и 2000 метров" class="rings-diagram" role="img" viewBox="0 0 240 220">
+        <circle cx="116" cy="107" fill="#e1eaf0" r="93">
+        </circle>
+        <circle cx="116" cy="107" fill="#cbdde5" r="67">
+        </circle>
+        <circle cx="116" cy="107" fill="#91b8ca" r="42">
+        </circle>
+        <path d="m96 136 15-56 17 7 13-28" fill="none" stroke="#2d647f" stroke-linecap="round" stroke-width="6">
+        </path>
+        <path d="M144 46h57M158 71h43M162 96h39" stroke="#828282" stroke-width=".7">
+        </path>
+        <text fill="#646464" font-size="10" text-anchor="end" x="202" y="43">
+         2 000 м
+        </text>
+        <text fill="#646464" font-size="10" text-anchor="end" x="202" y="68">
+         1 000 м
+        </text>
+        <text fill="#646464" font-size="10" text-anchor="end" x="202" y="93">
+         500 м
+        </text>
+        <text fill="#747474" font-size="10" text-anchor="middle" x="116" y="216">
+         Расстояние до велодорожки
+        </text>
+       </svg>
+       <p>
+        Каждая ячейка входит только в одну зону. Расстояние считаем от её края до текущей велодорожки. Во вкладке «Сумма по территории» объединяем ячейки с дорожками и их окружение.
+       </p>
+      </div>
+      <div class="card spillover-card">
+       <div class="model-toolbar">
+        <div class="small-label">
+         Шкала результата
+        </div>
+        <div aria-label="Шкала соседских моделей" class="segmented" id="spill-scales">
+        </div>
+       </div>
+       <div class="model-chart">
+        <div class="model-scale-note" id="spill-scale-note">
+        </div>
+        <div id="spill-model-chart">
+        </div>
+       </div>
+       <p class="model-notes" id="spillover-note">
+        В этом сравнении __NEIGHBOR_SAMPLE__ ячеек, включая __NEIGHBOR_CORE__ с велодорожками. Итоговая сумма относится только к ним. Чтобы выяснить, меняли ли велосипедисты маршруты, нужны данные о поездках.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div aria-hidden="true" class="section-anchor" data-section="findings">
+   </div>
+   <section class="section" id="findings">
+    <div class="wrap">
+     <div class="section-number">
+      05 / ВЫВОДЫ
+     </div>
+     <h2 id="findings-title">
+      Основные результаты
+     </h2>
+     <div class="conclusions" id="conclusions">
+     </div>
+    </div>
+   </section>
+   <div aria-hidden="true" class="section-anchor" data-section="method">
+   </div>
+   <section class="section" id="method">
+    <div class="wrap">
+     <div class="section-heading">
+      <div>
+       <div class="section-number">
+        06 / ИСТОРИЯ И ДАННЫЕ
+       </div>
+       <h2>
+        Даты открытия и ограничения
+       </h2>
+      </div>
+      <p class="section-intro">
+       В исходном слое нет дат открытия. Выборочная проверка официальных публикаций позволила датировать один участок, открытый после 2015 года.
+      </p>
+     </div>
+     <div class="history-grid">
+      <article class="card history-card">
+       <h3 id="history-title">
+        Проверка дат открытия
+       </h3>
+       <p id="history-summary">
+       </p>
+       <div id="history-items">
+       </div>
+       <p id="history-limitation" style="margin-top:17px;font-size:11px">
+       </p>
+       <div class="sources" id="history-sources" style="margin-top:20px">
+       </div>
+       <button class="btn" hidden="" id="download-history" style="margin-top:18px">
+        ↓ Разметка истории · CSV
+       </button>
+      </article>
+      <article class="card history-card">
+       <h3>
+        Ограничения данных
+       </h3>
+       <ul class="limitations" id="limitations">
+       </ul>
+       <div class="sources" id="method-sources">
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="footer">
+   <div class="wrap">
+    <span>
+     Москва · Велодорожки и ДТП с участием велосипедистов
+    </span>
+    <span id="report-meta">
+    </span>
+   </div>
+  </footer>
+  <script id="report-data" type="application/json">
+   __REPORT_DATA__
+  </script>
+  <script>
+   __REPORT_SCRIPT__
+  </script>
+ </body>
+</html>
